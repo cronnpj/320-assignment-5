@@ -5,9 +5,11 @@
     <title>Status Web Placeholder</title>
   </head>
   <body>
-    <h1>Status Web Placeholder</h1>
-    <p>If you can see this page, your status-web container is working.</p>
-    <p>Deployment test successful!</p>
+    <h1>Service Status Dashboard</h1>
+	<p>Status-Web: {% if status_up %}<span style="color:green;">UP</span>{% else %}<span style="color:red;">DOWN</span>{% endif %}</p>
+	<p>Adminer: {% if adminer_up %}<span style="color:green;">UP</span>{% else %}<span style="color:red;">DOWN</span>{% endif %}</p>
+	<p>Database: {% if db_up %}<span style="color:green;">UP</span>{% else %}<span style="color:red;">DOWN</span>{% endif %}</p>
+	<meta http-equiv="refresh" content="10">
 
   </body>
 </html>
